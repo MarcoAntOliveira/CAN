@@ -130,22 +130,8 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
 void setup() {
     Serial.begin(115200);
     delay(3000);
-
-    Serial.println("1");
-
     WiFi.softAP(ap_ssid, ap_password);
-
-    Serial.println("2");
-
-    Serial.println(WiFi.softAPIP());
-
-    Serial.println("3");
-
     delay(5000);
-
-    Serial.println("4");
-    Serial.println("5");
-
 
     static micro_ros_agent_locator locator;
 
@@ -199,7 +185,7 @@ void setup() {
     tempoUltimaTroca = millis();
     msg.data = 0;
 
-Serial.println("9 - Tudo inicializado!");
+
   }
 void loop() {
   delay(10);
